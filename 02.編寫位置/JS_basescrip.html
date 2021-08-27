@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>123123</title>
+
+  <!-- 可以將js代碼編寫到外部js文件中，然後通過script標籤引入 -->
+  <!-- 寫到外部文件中可以在不同的頁面中同時引用，也可以利用到瀏覽器的緩存機制推薦使用的方式 -->
+
+  <!-- script標籤一但用于引入外部文件了，就不能在編寫代碼了，即使編寫了瀏覽器也會忽略 -->
+  <!-- 如果需要則可以在創建一個新的script標籤用於編寫內部代碼 -->
+  <script type="text/javascript" src="script.js">
+    alert('我是js內部代碼');
+  </script>
+  <script>
+    alert('我是內部的js代碼')
+  </script>
+  
+  <!-- <script> -->
+  <!--   可以將js代碼編寫到script標籤 -->
+  <!--   alert("我是script標籤中的代碼！！"); -->
+  <!-- </script> -->
+</head>
+<body>
+
+  <!-- 可以將js代碼編寫到標籤的onclick屬性中 -->
+  <!-- 當我們點擊按紐時，js代碼才會執行 -->
+
+  <!-- 雖然可以寫在標籤的屬性中，但是他們屬於結構與行為耦合，不方便維護，不推薦使用 -->
+  <botton onclick="alert('討來，你點我幹嘛~~');">點我一下</botton>
+
+  <!-- 可以將js代碼寫在超連接的href屬性中，這樣當點擊超連結時，會執行js代碼 -->
+  <a href="javascript:;">你也點我一下</a>
+  <a href="javascript: alert('讓你點你就點~');">你也點我一下</a>
+  
+</body>
+</html>
